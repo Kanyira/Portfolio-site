@@ -1,0 +1,350 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #1c1c1c;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* General logo styling */
+.logo {
+    font-size: 2rem;         /* Adjust size as needed */
+    font-weight: bold;       /* Make the text bold */
+    color: #ffffff;          /* White color for Tech */
+    font-family: Arial, sans-serif; /* Optional font family */
+}
+
+/* Styling the "Kanyira" part */
+.logo .blue-text {
+    color: #00d9ff;          /* Blue color for Kanyira */
+}
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00d9ff;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 150px 50px 50px;
+    min-height: 100vh;
+    background-color: #1c1c1c;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.hero-text h1 span {
+    color: #00d9ff;
+}
+
+.hero-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.hero-text h2 span {
+    color: #00d9ff;
+    font-weight: 600;
+}
+
+.hero-text p {
+    margin-bottom: 30px;
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #00d9ff;
+    color: #1c1c1c;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+.btn:hover {
+    background-color: #00bcd4;
+}
+
+/* Hero Image */
+.hero-image {
+    position: relative;
+}
+
+.profile-circle {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00d9ff, #00bcd4);
+    filter: blur(50px);
+    z-index: -1;
+}
+
+.hero-image img {
+    width: 350px;
+    border-radius: 50%;
+    border: 8px solid #00d9ff;
+}
+ /* Inline additional styles for About Me section */
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 50px;
+            background-color: #1c1c1c;
+        }
+
+        .about-content {
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .tabs {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tab-link {
+            background-color: transparent;
+            border: 2px solid #00d9ff;
+            color: #00d9ff;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .tab-link.active,
+        .tab-link:hover {
+            background-color: #00d9ff;
+            color: #1c1c1c;
+        }
+
+        .tab-content {
+            display: none;
+            margin-top: 20px;
+            color: #fff;
+            text-align: left;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Image Styling */
+        .about-image img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #00d9ff;
+            margin-bottom: 20px;
+        }
+    /* Mission, Vision, Values, and Dream Section */
+.mission-vision-values {
+    padding: 60px 20px;
+    background-color: #1c1c1c;
+    color: #fff;
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #00d9ff;
+}
+
+/* Flexbox container that holds the items */
+.mv-container {
+    display: flex;
+    gap: 20px; /* Add some space between the items */
+    justify-content: space-between; /* Distribute items evenly */
+    flex-wrap: wrap; /* Allow the items to wrap if necessary */
+}
+
+/* Flex item styles for each .mv-item */
+.mv-item {
+    flex: 1 1 30%; /* Each item will take 30% of the width */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden; /* Prevent content from spilling out */
+    height: 120px; /* Default height with only the heading visible */
+    transition: height 0.3s ease-in-out; /* Smooth transition for growing effect */
+}
+
+/* Initially hide the content */
+.mv-item .mv-content {
+    display: none; /* Hide content initially */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Styling for the title */
+.mv-item .mv-title {
+    color: #00d9ff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    cursor: pointer; /* Pointer to indicate it’s clickable */
+}
+
+/* When hovering over the mv-item, show the content and expand the height */
+.mv-item:hover {
+    height: auto; /* Let the item grow when hovered */
+}
+
+/* Show the content on hover */
+.mv-item:hover .mv-content {
+    display: block; /* Show content when hovered */
+}
+
+
+/* Services Section */
+#services {
+    background-color: #1c1c1c;
+    padding: 60px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Services Container */
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+/* Left and Right Service Sections */
+.services-left,
+.services-right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+}
+
+/* Service Links */
+.service-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #00d9ff; /* Match blue color */
+    font-size: 1.2rem; /* Adjusted to match previous sections */
+    font-weight: 300; /* Lighter weight, consistent with other sections */
+    border-bottom: 1px solid #00d9ff;
+    padding-bottom: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.service-link:hover {
+    color: #fff; /* On hover, color turns white */
+    transform: translateY(-3px); /* Subtle lift effect */
+}
+
+.arrow {
+    font-size: 1.5rem;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.service-link:hover .arrow {
+    transform: translateX(5px); /* Arrow moves slightly on hover */
+}
+
+
+/* Detailed Service Sections */
+.service-details {
+    padding: 60px 20px;
+    background-color: #1c1c1c; /* Matching the background color of previous sections */
+    color: #fff; /* White text for contrast */
+}
+
+.service-details h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #00d9ff; /* Blue color for heading */
+}
+
+.service-details p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #fff; /* White text for paragraph */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column; /* Stack services vertically on small screens */
+    }
+
+    .service-link {
+        font-size: 1rem; /* Smaller text on mobile */
+    }
+}
+
