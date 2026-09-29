@@ -135,6 +135,8 @@ body {
 
 .hero-image img {
     width: 350px;
+    height: 350px;
+    object-fit: cover;
     border-radius: 50%;
     border: 8px solid #00d9ff;
 }
@@ -339,12 +341,91 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        background-color: #1c1c1c;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .nav-links li {
+        margin: 5px 10px;
+    }
+
+    /* Hero Section */
+    .hero {
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 180px 20px 30px;
+        text-align: center;
+    }
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+    .hero-text p {
+        margin: 0 auto 30px; /* Center the paragraph text */
+    }
+    .profile-circle {
+        width: 250px;
+        height: 250px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .hero-image {
+        margin-bottom: 40px;
+    }
+    .hero-image img {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* About Section */
+    .about-container {
+        padding: 60px 20px;
+    }
+    .tabs {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .tab-link {
+        margin: 0;
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Mission, Vision... Section */
+    .mv-item {
+        flex: 1 1 100%;
+        height: auto; /* Allow items to be full height on mobile */
+    }
+    .mv-item .mv-content {
+        display: block; /* Show content by default on small screens */
+    }
+
+    /* Services Section */
     .services-container {
         flex-direction: column; /* Stack services vertically on small screens */
     }
-
     .service-link {
         font-size: 1rem; /* Smaller text on mobile */
+    }
+    .service-box {
+        margin-bottom: 20px;
+    }
+    .service-links {
+        flex-direction: column;
+    }
+    .service-column {
+        width: 100%;
+        margin-bottom: 10px;
     }
 }
 
